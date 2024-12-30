@@ -1,0 +1,12 @@
+from collections import deque
+stack =deque()
+stack.append('s')
+stack.append('s')
+stack.append('s')
+stack.append('s')
+stack.append('s')
+print('Initial stack ')
+print(stack)
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())

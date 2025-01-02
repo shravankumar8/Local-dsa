@@ -1,24 +1,34 @@
 public class SkipString {
-    static  String[] helper(String[] str, int index, String[] fin,String target){
-        if(index>=str.length){
-            return fin;
+
+    static String skipApple(String up) {
+        if (up.isEmpty()) {
+            return "";
         }
-        if(str[index]!=target){
-            fin[]
-
+        if (up.startsWith("apple")) {
+            return skipApple(up.substring(5));
+        } else {
+            return up.charAt(0) + skipApple(up.substring(1));
         }
-    }
-    static String Skip(String str, String target){
-        String[] stringArray=str.split(" ");
-        String[] Fina=helper(stringArray,0,new int[stringArray.length]); 
-
-
 
     }
+
+    static String skipApp(String up) {
+        if (up.isEmpty()) {
+            return "";
+        }
+        if (up.startsWith("app") && !up.startsWith("apple")) {
+            return skipApp(up.substring(5));
+        } else {
+            return up.charAt(0) + skipApp(up.substring(1));
+        }
+
+    }
+
     public static void main(String[] args) {
-        String str="Hello everyone this is shravan kumar he likes apple apple  mango ";
-        str=Skip(str,"apple");
+        String str = "kajalapphf ";
+        str = skipApp(str);
+
         System.out.println(str);
-        
+
     }
 }
